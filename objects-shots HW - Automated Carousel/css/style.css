@@ -1,0 +1,52 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+}
+body {
+  text-align: center;
+  align-self: center;
+}
+
+h2, img, h3{
+  text-align: center;
+  align-self: center;
+}
+
+.carousel{
+  align-self: center;
+  height: 600px;
+ }
+
+.fade{
+  -webkit-animation: 1.5s fade;
+  animation: 1.5s fade;
+}
+
+@-webkit-keyframes fade{
+  from{opacity: 0.4}
+  to{opacity:1}
+}
+
+@keyframes fade{
+  from{opacity: 0.4}
+  to{opacity:1}
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

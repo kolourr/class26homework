@@ -10,6 +10,7 @@ function getDrink(){
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
     .then(res => res.json()) // parse response as JSON
     .then(data => {
+        console.log(data.drinks)
       console.log(data.drinks[0])
       //console logging the response that came back from the server 
 document.querySelector('h2').innerText = data.drinks[0].strDrink

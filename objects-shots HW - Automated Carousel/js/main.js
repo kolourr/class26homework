@@ -22,6 +22,7 @@ function getDrink(){
         let index = 0
 
         startCarousel = () => {
+   
             document.querySelector('h2').innerText = data.drinks[index].strDrink
             document.querySelector('img').src = data.drinks[index].strDrinkThumb
             document.querySelector('h3').innerText = data.drinks[index].strInstructions
@@ -31,12 +32,38 @@ function getDrink(){
 
         }
 
+      
+
         //Stop the carousel from running 
         document.getElementById('stopButton').addEventListener('click', () => {
             window.clearInterval(interval) 
         })
+
+            //Continue  carousel
+            document.getElementById('continueButton').addEventListener('click', startCarousel)
  
 
+           //Go Back  carousel
+           document.getElementById('goButton').addEventListener('click', backCarousel)
+
+           function backCarousel (){
+            index--
+            document.querySelector('h2').innerText = data.drinks[index].strDrink
+            document.querySelector('img').src = data.drinks[index].strDrinkThumb
+            document.querySelector('h3').innerText = data.drinks[index].strInstructions
+           
+            if(index ==0) index = data.drinks.length 
+            console.log(index)
+           }
+      
+       
+
+        
+ 
+ 
+
+    
+         
 
     })
     .catch(err => {
